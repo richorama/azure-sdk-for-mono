@@ -7,11 +7,6 @@ Service Bus, distributed caching through cache.</p>
 
 <h1>Features</h1>
 <ul>
-    <li>Tables
-        <ul>
-            <li>Create/Delete Tables</li>
-            <li>Query/Create/Read/Update/Delete Entities</li>
-    </li>
     <li>BLOBs
         <ul>
             <li>Create/Read/Update/Delete BLOBs</li>
@@ -23,6 +18,7 @@ Service Bus, distributed caching through cache.</p>
             <li>Advanced Queue Operations</li>
     </li>
 </ul>
+Tables have not been implemented.
         
 <h1>Getting Started</h1>
 <h2>Download</h2>
