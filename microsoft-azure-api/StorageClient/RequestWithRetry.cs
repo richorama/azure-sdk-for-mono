@@ -21,7 +21,7 @@
 namespace Microsoft.WindowsAzure.StorageClient
 {
     using System;
-    using System.Data.Services.Client;
+    //using System.Data.Services.Client;
     using System.Net;
     using System.Threading;
     using Tasks;
@@ -133,8 +133,8 @@ namespace Microsoft.WindowsAzure.StorageClient
                 }
                 catch (InvalidOperationException e)
                 {
-                    DataServiceClientException dsce = CommonUtils.FindInnerDataServiceClientException(e);
-
+                    //DataServiceClientException dsce = CommonUtils.FindInnerDataServiceClientException(e);
+					/*
                     // rethrow 400 class errors immediately as they can't be retried
                     // 501 (Not Implemented) and 505 (HTTP Version Not Supported) shouldn't be retried either.
                     if (dsce != null &&
@@ -143,7 +143,7 @@ namespace Microsoft.WindowsAzure.StorageClient
                           || dsce.StatusCode == (int)HttpStatusCode.HttpVersionNotSupported))
                     {
                         throw;
-                    }
+                    }*/
 
                     // If it is BlobTypeMismatchExceptionMessage, we should throw without retry
                     if (e.Message == SR.BlobTypeMismatchExceptionMessage)
@@ -168,6 +168,7 @@ namespace Microsoft.WindowsAzure.StorageClient
 
                         // Materialize exceptions
                         var scratch = delayTask.Result;
+						Console.WriteLine(scratch);
                     }
                 }
             }
@@ -220,7 +221,7 @@ namespace Microsoft.WindowsAzure.StorageClient
                     }
                 }
                 catch (InvalidOperationException e)
-                {
+                {/*
                     DataServiceClientException dsce = CommonUtils.FindInnerDataServiceClientException(e);
 
                     // rethrow 400 class errors immediately as they can't be retried
@@ -232,7 +233,7 @@ namespace Microsoft.WindowsAzure.StorageClient
                     {
                         throw;
                     }
-
+					  */
                     // If it is BlobTypeMismatchExceptionMessage, we should throw without retry
                     if (e.Message == SR.BlobTypeMismatchExceptionMessage)
                     {

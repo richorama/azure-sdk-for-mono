@@ -531,7 +531,7 @@ namespace Microsoft.WindowsAzure.StorageClient
 
                     yield return task;
 
-                    var scratch = task.Result;
+                    //var scratch = task.Result;
 
                     // We now have data, so we read it
                     readComplete = this.ReadBufferedData(buffer, ref offset, ref count);
@@ -620,7 +620,7 @@ namespace Microsoft.WindowsAzure.StorageClient
 
                                 var writeTask = memoryStream.WriteAsync(buffer, 0, numRead);
                                 yield return writeTask;
-                                var scratch = writeTask.Result; // Materialize any exceptions
+                                //var scratch = writeTask.Result; // Materialize any exceptions
                                 totalCopied += numRead;
                             }
                         }
@@ -656,7 +656,7 @@ namespace Microsoft.WindowsAzure.StorageClient
                     var copyTask = new InvokeTaskSequenceTask(() => { return stream.WriteTo(memoryStream); });
                     yield return copyTask;
 
-                    var scratch = copyTask.Result; // Materialize any errors
+                    //var scratch = copyTask.Result; // Materialize any errors
 
                     memoryStream.Position = 0; // Rewind the stream to allow for reading
                     this.downloadedBlocksList.Add(new DownloadedBlock(startPosition, memoryStream));
@@ -934,7 +934,7 @@ namespace Microsoft.WindowsAzure.StorageClient
             {
                 if (this.downloadedBlocksList.Count != 0)
                 {
-                    var farPoint = position + bufferedLength;
+                    //var farPoint = position + bufferedLength;
                     lock (this.downloadedBlocksList)
                     {
                         for (int blockID = 0; blockID < this.downloadedBlocksList.Count; blockID++)

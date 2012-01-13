@@ -1070,6 +1070,7 @@ namespace Microsoft.WindowsAzure.StorageClient
             {
                 // Materialize exceptions
                 var scratch = task.Result;
+				Console.WriteLine(scratch);
                 setResult(true);
             }
             catch (StorageClientException e)
@@ -1180,6 +1181,7 @@ namespace Microsoft.WindowsAzure.StorageClient
 
                     // Materialize any exceptions
                     var scratch = copyTask.Result;
+					Console.WriteLine(scratch);
                 }
             }
 

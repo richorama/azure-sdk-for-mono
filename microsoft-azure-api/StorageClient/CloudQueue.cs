@@ -1184,6 +1184,7 @@ namespace Microsoft.WindowsAzure.StorageClient
                 var writeTask = requestStream.WriteAsync(requestBody, 0, requestBody.Length);
                 yield return writeTask;
                 var scratch = writeTask.Result;
+				Console.WriteLine(scratch);
             }
 
             var task = webRequest.GetResponseAsyncWithTimeout(this.ServiceClient, this.ServiceClient.Timeout);
@@ -1343,6 +1344,8 @@ namespace Microsoft.WindowsAzure.StorageClient
                     Task<NullTaskReturn> writeTask = requestStream.WriteAsync(requestBody, 0, requestBody.Length);
                     yield return writeTask;
                     NullTaskReturn scratch = writeTask.Result;
+					Console.WriteLine(scratch);
+						
                 }
             }
             else

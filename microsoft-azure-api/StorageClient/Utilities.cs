@@ -53,27 +53,7 @@ namespace Microsoft.WindowsAzure.StorageClient
                         null);
         }
 
-        /// <summary>
-        /// Translates the data service client exception.
-        /// </summary>
-        /// <param name="e">The exception.</param>
-        /// <returns>The translated exception.</returns>
-        internal static Exception TranslateDataServiceClientException(InvalidOperationException e)
-        {
-            var dsce = CommonUtils.FindInnerDataServiceClientException(e);
-
-            if (dsce == null)
-            {
-                return e;
-            }
-
-            return TranslateFromHttpStatus(
-                (HttpStatusCode)dsce.StatusCode,
-                null,
-                GetExtendedErrorFromXmlMessage(dsce.Message),
-                e);
-        }
-
+      
         /// <summary>
         /// Translates the web exception.
         /// </summary>

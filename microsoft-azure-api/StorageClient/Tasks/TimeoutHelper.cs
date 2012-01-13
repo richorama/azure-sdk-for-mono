@@ -79,12 +79,14 @@ namespace Microsoft.WindowsAzure.StorageClient.Tasks
         {
             TraceHelper.WriteLine("Creating timeout task sequence " + timeout);
             NullTaskReturn scratch;
+			
 
             using (DelayTask timeoutTask = new DelayTask(timeout))
             {
                 yield return timeoutTask;
                 scratch = timeoutTask.Result;
             }
+			Console.WriteLine(scratch);
 
             throw ThrowTimeoutError(timeout);
         }

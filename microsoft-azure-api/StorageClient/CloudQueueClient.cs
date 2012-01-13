@@ -501,6 +501,7 @@ namespace Microsoft.WindowsAzure.StorageClient
 
                 // Materialize any exceptions.
                 NullTaskReturn scratch = downloadTask.Result;
+				Console.WriteLine(scratch);
 
                 // Get the result from the memory stream.
                 memoryStream.Seek(0, SeekOrigin.Begin);
@@ -545,6 +546,7 @@ namespace Microsoft.WindowsAzure.StorageClient
 
                     // Materialize any exceptions.
                     NullTaskReturn scratch = uploadTask.Result;
+					Console.WriteLine(scratch);
                 }
             }
 

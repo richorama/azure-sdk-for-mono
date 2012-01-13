@@ -456,6 +456,7 @@ namespace Microsoft.WindowsAzure.StorageClient
 
                     // Materialize any exceptions
                     var scratch = copyTask.Result;
+					Console.WriteLine(scratch);
                 }
             }
 

@@ -22,7 +22,7 @@ namespace Microsoft.WindowsAzure.StorageClient
 {
     using System;
     using System.Collections.Generic;
-    using System.Data.Services.Client;
+    //using System.Data.Services.Client;
     using System.Diagnostics;
     using System.Globalization;
     using System.Net;
@@ -303,7 +303,7 @@ namespace Microsoft.WindowsAzure.StorageClient
         /// </summary>
         /// <param name="exception">The exception.</param>
         /// <returns>The found exception or null.</returns>
-        internal static DataServiceClientException FindInnerDataServiceClientException(Exception exception)
+        /*internal static DataServiceClientException FindInnerDataServiceClientException(Exception exception)
         {
             DataServiceClientException dsce = null;
 
@@ -320,7 +320,7 @@ namespace Microsoft.WindowsAzure.StorageClient
             }
 
             return dsce;
-        }
+        }*/
 
         /// <summary>
         /// Asserts the type of the continuation.

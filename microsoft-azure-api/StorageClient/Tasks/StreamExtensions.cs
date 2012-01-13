@@ -120,6 +120,7 @@ namespace Microsoft.WindowsAzure.StorageClient.Tasks
                 var writeTask = toStream.WriteAsync(buffer, 0, readCount);
                 yield return writeTask;
                 var scratch = writeTask.Result;
+				Console.WriteLine(scratch);
             }
             while (readCount != 0);
         }
@@ -165,6 +166,7 @@ namespace Microsoft.WindowsAzure.StorageClient.Tasks
                     var writeTask = toStream.WriteAsync(buffer, 0, readCount);
                     yield return writeTask;
                     var scratch = writeTask.Result;
+					Console.WriteLine(scratch);
                 }
                 while (readCount != 0);
             }

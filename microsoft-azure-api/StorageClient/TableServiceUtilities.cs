@@ -22,7 +22,7 @@ namespace Microsoft.WindowsAzure.StorageClient
 {
     using System;
     using System.Collections.Generic;
-    using System.Data.Services.Common;
+    //using System.Data.Services.Common;
     using System.Diagnostics;
     using System.Linq;
     using System.Reflection;

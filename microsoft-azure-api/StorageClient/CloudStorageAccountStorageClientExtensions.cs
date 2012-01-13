@@ -78,7 +78,7 @@ namespace Microsoft.WindowsAzure.StorageClient
         /// </summary>
         /// <param name="account">The storage account.</param>
         /// <returns>A client object that specifies the Table service endpoint.</returns>
-        public static CloudTableClient CreateCloudTableClient(this CloudStorageAccount account)
+       /* public static CloudTableClient CreateCloudTableClient(this CloudStorageAccount account)
         {
             if (account.TableEndpoint == null)
             {
@@ -96,6 +96,6 @@ namespace Microsoft.WindowsAzure.StorageClient
             }
 
             return new CloudTableClient(account.TableEndpoint, account.Credentials);
-        }
+        }*/
     }
 }

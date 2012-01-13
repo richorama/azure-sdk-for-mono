@@ -61,7 +61,7 @@ namespace Microsoft.WindowsAzure.StorageClient.Tasks
             Task<WebResponse> wrappedTask = TimeoutHelper.GetTimeoutWrappedTask(timeout, serverTask);
             return wrappedTask;
         }
-
+		/*
         /// <summary>
         /// Gets an asynchronous response to a given Web request.
         /// </summary>
@@ -76,7 +76,7 @@ namespace Microsoft.WindowsAzure.StorageClient.Tasks
 
             Task<WebResponse> wrappedTask = TimeoutHelper.GetTimeoutWrappedTask(timeout, serverTask);
             return wrappedTask;
-        }
+        }*/
 
         /// <summary>
         /// Gets an asynchronous request stream for a given Web request.
@@ -118,7 +118,7 @@ namespace Microsoft.WindowsAzure.StorageClient.Tasks
                 (asyncresult) => service.EndGetResponse(asyncresult, req),
                 req.Abort);
         }
-
+/*
         /// <summary>
         /// Gets an asynchronous response to a given Web request.
         /// </summary>
@@ -132,6 +132,6 @@ namespace Microsoft.WindowsAzure.StorageClient.Tasks
                 req.BeginGetResponse,
                 (asyncresult) => service.EndGetResponse(asyncresult, req),
                 req.Abort);
-        }
+        }*/
     }
 }

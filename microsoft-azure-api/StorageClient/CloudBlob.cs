@@ -1474,6 +1474,7 @@ namespace Microsoft.WindowsAzure.StorageClient
 
                 // Materialize any exceptions
                 var scratch = copyTask.Result;
+							Console.WriteLine(scratch);
             }
 
             // Get the response
@@ -1542,6 +1543,7 @@ namespace Microsoft.WindowsAzure.StorageClient
 
                 // Materialize any exceptions
                 var scratch = copyTask.Result;
+							Console.WriteLine(scratch);
             }
         }
 
@@ -1777,6 +1779,7 @@ namespace Microsoft.WindowsAzure.StorageClient
             yield return task;
 
             var scratch = task.Result;
+			Console.WriteLine(scratch);
         }
 
         /// <summary>
@@ -1856,6 +1859,7 @@ namespace Microsoft.WindowsAzure.StorageClient
             {
                 // Materialize exceptions
                 var scratch = task.Result;
+				Console.WriteLine(scratch);
 
                 setResult(true);
             }

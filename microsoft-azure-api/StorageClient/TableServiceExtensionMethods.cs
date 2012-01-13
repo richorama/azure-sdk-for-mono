@@ -20,7 +20,7 @@
 
 namespace Microsoft.WindowsAzure.StorageClient
 {
-    using System.Data.Services.Client;
+    //using System.Data.Services.Client;
     using System.Linq;
 
     /// <summary>
@@ -35,9 +35,9 @@ namespace Microsoft.WindowsAzure.StorageClient
         /// <typeparam name="TElement">The type of the element.</typeparam>
         /// <param name="query">The query.</param>
         /// <returns>The converted query.</returns>
-        public static CloudTableQuery<TElement> AsTableServiceQuery<TElement>(this IQueryable<TElement> query)
+        /*public static CloudTableQuery<TElement> AsTableServiceQuery<TElement>(this IQueryable<TElement> query)
         {
             return new CloudTableQuery<TElement>(query as DataServiceQuery<TElement>);
-        }
+        }*/
     }
 }

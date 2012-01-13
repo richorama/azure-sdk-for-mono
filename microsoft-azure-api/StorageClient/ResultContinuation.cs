@@ -177,6 +177,7 @@ namespace Microsoft.WindowsAzure.StorageClient
                         {
                             case VersionElement:
                                 string version = reader.ReadElementContentAsString();
+							Console.WriteLine(version);
 
                                 // For future versioning
                                 break;

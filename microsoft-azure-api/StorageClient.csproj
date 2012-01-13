@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--Copyright 2011 Microsoft Corporation
 
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -56,19 +56,15 @@
     <CodeAnalysisRules>
     </CodeAnalysisRules>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>
-    </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <NoStdLib>false</NoStdLib>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
@@ -80,9 +76,6 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Services.Client">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -124,8 +117,6 @@
     <Compile Include="StorageClient\CloudQueueClient.cs" />
     <Compile Include="StorageClient\CloudQueueMessage.cs" />
     <Compile Include="StorageClient\CloudStorageAccountStorageClientExtensions.cs" />
-    <Compile Include="StorageClient\CloudTableClient.cs" />
-    <Compile Include="StorageClient\CloudTableQuery.cs" />
     <Compile Include="StorageClient\CommonUtils.cs" />
     <Compile Include="StorageClient\ContainerListingDetails.cs" />
     <Compile Include="StorageClient\DeleteSnapshotsOption.cs" />
@@ -213,11 +204,8 @@
     <Compile Include="StorageClient\StorageServerException.cs" />
     <Compile Include="StorageClient\StreamUtilities.cs" />
     <Compile Include="StorageClient\TableErrorCodeStrings.cs" />
-    <Compile Include="StorageClient\TableServiceContext.cs" />
     <Compile Include="StorageClient\TableServiceEntity.cs" />
     <Compile Include="StorageClient\TableServiceExtensionMethods.cs" />
-    <Compile Include="StorageClient\TableServiceTable.cs" />
-    <Compile Include="StorageClient\TableServiceUtilities.cs" />
     <Compile Include="StorageClient\TaskImplHelper.cs" />
     <Compile Include="StorageClient\Tasks\APMTask.cs" />
     <Compile Include="StorageClient\Tasks\AsyncResultExtensions.cs" />
@@ -228,7 +216,6 @@
     <Compile Include="StorageClient\Tasks\RaceTask.cs" />
     <Compile Include="StorageClient\Tasks\StreamExtensions.cs" />
     <Compile Include="StorageClient\Tasks\SynchronousTask.cs" />
-    <Compile Include="StorageClient\Tasks\TableServiceExtensions.cs" />
     <Compile Include="StorageClient\Tasks\Task.cs" />
     <Compile Include="StorageClient\Tasks\TaskAsyncResult.cs" />
     <Compile Include="StorageClient\Tasks\TimeoutHelper.cs" />

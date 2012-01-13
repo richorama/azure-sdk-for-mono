@@ -37,14 +37,6 @@ namespace Microsoft.WindowsAzure.StorageClient
             return Utilities.TranslateWebException(exceptionRef) as StorageException;
         }
 
-        /// <summary>
-        ///  Translates the data service client exception.
-        /// </summary>
-        /// <param name="exceptionRef">The exception to translate.</param>
-        /// <returns>The translated exception.</returns>
-        public static StorageException TranslateDataServiceClientException(this InvalidOperationException exceptionRef)
-        {
-            return Utilities.TranslateDataServiceClientException(exceptionRef) as StorageException;
-        }
+    
     }
 }

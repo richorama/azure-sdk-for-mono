@@ -492,6 +492,7 @@ namespace Microsoft.WindowsAzure.StorageClient
 
                     // Make sure task completed successfully by materializing the exception
                     var result = newTask.Result;
+					Console.WriteLine(result);
                 }
             }
         }
@@ -559,6 +560,7 @@ namespace Microsoft.WindowsAzure.StorageClient
 
             yield return newTask;
             var result = newTask.Result; // Materialize the results to ensure exception propagation
+			Console.WriteLine(result);
         }
 
         /// <summary>
@@ -574,6 +576,7 @@ namespace Microsoft.WindowsAzure.StorageClient
                 var task = new InvokeTaskSequenceTask(this.FlushInternal);
                 yield return task;
                 var result = task.Result; // Materialize the errors
+				Console.WriteLine(result);
             }
 
             // If all blocks are uploaded, commit 
@@ -596,6 +599,7 @@ namespace Microsoft.WindowsAzure.StorageClient
                    this.currentModifier.RetryPolicy);
                 yield return task;
                 var result = task.Result;
+							Console.WriteLine(result);
             }
 
             // Now we can set the full size.
@@ -616,6 +620,7 @@ namespace Microsoft.WindowsAzure.StorageClient
             var task = this.Blob.ToBlockBlob.UploadFullBlobWithRetryImpl(this.blockBuffer, this.currentModifier);
             yield return task;
             var result = task.Result;
+						Console.WriteLine(result);
 
             // Reset all of the state
             this.Abort();
@@ -645,6 +650,7 @@ namespace Microsoft.WindowsAzure.StorageClient
             var task = this.Blob.ToBlockBlob.UploadBlockWithRetry(this.blockBuffer, blockID, hash, this.currentModifier);
             yield return task;
             var result = task.Result;
+						Console.WriteLine(result);
 
             // Add the block to the list of blocks.
             this.blockList.Add(blockID);

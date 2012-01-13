@@ -160,6 +160,7 @@ namespace Microsoft.WindowsAzure.StorageClient
                     this.producerTasksCreated++;
 
                     var scatch = producerTask.Result;
+					Console.WriteLine(scatch);
 
                     if (blockAsStream == null)
                     {
@@ -220,6 +221,7 @@ namespace Microsoft.WindowsAzure.StorageClient
 
             yield return commitTask;
             var commitTaskResult = commitTask.Result;
+			Console.WriteLine(commitTaskResult);
         }
 
         /// <summary>
@@ -286,6 +288,7 @@ namespace Microsoft.WindowsAzure.StorageClient
 
                     // Materialize any exceptions
                     var scratch = writeTask.Result;
+					Console.WriteLine(scratch);
 
                     totalCopied += numRead;
                 }

@@ -21,13 +21,13 @@
 namespace Microsoft.WindowsAzure.StorageClient
 {
     using System;
-    using System.Data.Services.Common;
+    //using System.Data.Services.Common;
 
     /// <summary>
     /// Represents an entity in the Windows Azure Table service.
     /// </summary>
     [CLSCompliant(false)]
-    [DataServiceKey("PartitionKey", "RowKey")]
+    //[DataServiceKey("PartitionKey", "RowKey")]
     public abstract class TableServiceEntity
     {
         /// <summary>
